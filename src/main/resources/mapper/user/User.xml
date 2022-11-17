@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cbnu.capstone.tripwithme.mapper.user.UserInfoMapper">
+
+    <select id="getUserInfo" resultType="cbnu.capstone.tripwithme.dto.user.UserDTO">
+        SELECT * FROM user where e_mail = #{temp};
+    </select>
+
+    <insert id="setUserInfo">
+        INSERT INTO user (e_mail, userpassword, username, usernickname, age, mbti_I, mbti_E, mbti_T, mbti_F, mbti_S, mbti_N, mbti_J, mbti_P, wantPlace1, wantPlace2, wantPlace3, wantPlace4, wantPlace5)
+        values ( #{e_mail}, #{password}, #{name}, #{nickname},
+                 #{age}, #{i}, #{e}, #{t}, #{f},
+                 #{s}, #{n}, #{j}, #{p},
+                 #{wp1},#{wp2},#{wp3},#{wp4},#{wp5})
+    </insert>
+</mapper>

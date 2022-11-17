@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cbnu.capstone.tripwithme.mapper.community.CommunityMapper">
+
+    <select id="getCommunityList" resultType="cbnu.capstone.tripwithme.dto.community.CommunityDTO">
+        SELECT * from community order by Rand() limit 5;
+    </select>
+
+</mapper>
